@@ -1,0 +1,408 @@
+---
+title: "Using tools to make science more open"
+author: "Tim Vantilborgh"
+bibliography: "bibliography.bib"
+format: 
+  revealjs:
+    theme: moon
+editor: visual
+---
+
+# Introduction
+
+## A couple of questions
+
+<iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
+
+</iframe>
+
+## A couple of questions
+
+<iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
+
+</iframe>
+
+## Replication crisis in psychology
+
+![@opensciencecollaboration2015](images/replication_crisis.jpeg){fig-align="center" width=60%}
+
+::: {.notes}
+The mean effect size (r) of the replication effects (Mr = 0.197, SD = 0.257) was half the magnitude of the mean effect size of the original effects (Mr = 0.403, SD = 0.188), representing a substantial decline. Ninety-seven percent of original studies had significant results (P < .05). Thirty-six percent of replications had significant results; 47% of original effect sizes were in the 95% confidence interval of the replication effect size; 39% of effects were subjectively rated to have replicated the original result; and if no bias in original results is assumed, combining original and replication results left 68% with statistically significant effects.
+:::
+
+## The four horsemen and the replication crisis
+
+![](images/4horsemen.png){fig-align="center"}
+
+## A possible solution: Open science practices
+
+<iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
+
+</iframe>
+
+# Practical information
+
+## Goals workshop
+
+-   Stimulate awareness of importance open science practices
+-   Increase confidence that you are able to preregister your own research, create reproducible research, and share research materials
+
+## Overview workshop
+
+1.  Brief introduction to open science practices
+2.  Preregistration: An illustration
+3.  Reproducible research: A brief workshop
+4.  Sharing research materials: An illustration
+
+## Illustrative example
+
+-   Imagine that I would like to study the effectiveness of this workshop
+-   I could set up an experiment with 2 conditions (workshop group versus control group)
+-   I could measure attitude towards open science practices at the start and the end of the workshop in both conditions
+-   Hypothesis: there is a stronger increase in positive attitude towards open science practices in the workshop condition, compared to the control condition
+
+## Practical aspects
+
+-   Ideally, you have a laptop with an internet connection and R + Rstudio installed
+-   All materials can be downloaded from:
+
+# Brief introduction to open science practices
+
+## Why do we need open science?
+
+Example Eric-Jan Wagenmakers:
+
+-   Dr. X has a favorite theory that she has worked on and published about previously.
+-   Dr. X designs an experiment to test a prediction from her theory.
+-   Dr. X collects the data, a painstaking and costly process. Part of her career and those of her students ride on the outcome.
+
+## Why do we need open science?
+
+-   Now the data need to be analyzed.
+-   If p \< .05, the experiment is deemed a success; if p \> .05, it is deemed a failure.
+
+## Why do we need open science?
+
+Who is, without a shadow of a doubt, the most biased analyst in the entire galaxy, past, present, and future?
+
+## Why do we need open science?
+
+![](images/feynman.png){fig-align="center"}
+
+## Why do we need open science?
+
+-   So the world's most biased analyst, Dr. X, the easiest person to fool, proceeds to analyze the data.
+-   Dr. X can do this alone, without any oversight whatsoever. In most cases, the data and analysis code never leave the lab.
+
+## Why do we need open science?
+
+-   Data are analyzed with no accountability, by the person who is easiest to fool, often with limited statistical training, who has every incentive imaginable to produce p \< .05. 
+-   When p \< .05, the result is declared "significant"and any further doubt is frowned upon.
+
+## What is open science?
+
+> "Open Science" is an umbrella term used to refer to the concepts of openness, transparency, rigour, reproducibility, replicability, and accumulation of knowledge, which are considered fundamental features of science [^1]
+
+[^1]: @cruwell2019
+
+## What is open science?
+
+@cruwell2019:
+
+-   Open access
+-   Open data
+-   Preregistration
+-   Reproducible analyses
+-   Best practices in statistics
+-   Replications
+-   Teaching open science
+
+## What is open science?
+
+![](images/transparency.png){fig-align="center"}
+
+## What is preregistration?
+
+> "...you're simply specifying your research plan in advance of your study and submitting it to a registry." [@science]
+
+> "The specification of a research design, hypotheses, and analysis plan prior to observing the outcomes of a study" [@lindsay2018]
+
+## What is preregistration?
+
+![](images/goals.png){fig-align="center"}
+
+## What is preregistration?
+
+-   Distinguishes exploratory from confirmatory findings
+-   Prevents researchers from fooling themselves
+-   Does not rule out exploratory findings; just labels them accordingly
+
+## Exploratory vs confirmatory research
+
+:::: {.columns}
+
+::: {.column width="50%"}
+#### Exploratory
+
+-   Hypothesis generating
+-   Results require replication
+-   Data-dependent
+-   Minimizes false negatives
+-   p-values lose diagnostic value
+-   Noinferences to wider population
+:::
+
+::: {.column width="50%"}
+#### Confirmatory
+
+-   Hypothesis testing
+-   Results are held to the highest standards
+-   Data-independent
+-   Minimizes false positives
+-   p-values retain diagnostic value
+-   Inferences may be drawn to wider population
+:::
+
+::::
+
+## Why preregister?
+
+-   Makes the research process more transparent
+-   Makes you thoroughly think through your data collection and analysis before starting
+-   Allows to clearly distinguish between a priori and post-hoc decisions (confirmatory and exploratory analyses)
+-   Strict documentation of studies
+-   Allows others to reproduce your results (with code and data sharing)
+-   Makes it harder to fool yourself and others
+
+## What is reproducible research?
+
+> Research is reproducible when others can reproduce the results of a scientific study given only the original data, code, and documentation [@alston2021]
+
+## What are benefits of reproducible research?
+
+@alston2021:
+
+-   A log of all steps taken in the research process
+-   Easy to update analyses
+-   Easy to reuse materials and save time
+-   Signals rigor, transparency, and trustworthiness
+-   Increases citation rate
+-   Allows others to learn from your work
+-   Simplifies follow-up research
+-   Prevents mistakes from compounding over time
+
+## What are challenges of reproducible research?
+
+@alston2021:
+
+-   Learning curve
+-   Complexity
+-   Technological change
+-   Fear of human error
+-   Intellectual property rights
+
+## What are open materials?
+
+> Sharing relevant research material (data, code, questionnaire, stimuli, lab notebook, ...) and/or research output (presentations, manuscripts) with the broader public.
+
+## What are benefits of open materials?
+
+-   Verification
+-   Reproducability
+-   Improves meta-analyses
+-   Increases citations
+-   Improves fairness
+-   Speeds up scientific advancement
+
+## Hurdles for adopting open science practices
+
+-   Lack of awareness
+-   Lack of training
+-   Fear
+-   Slow process is not ideal for ECRs
+-   Lack of incentives
+-   Not supported by the system
+
+## Open science tools
+
+-   Software (Rmarkdown, Quarto)
+-   Packages (worcs, papaja)
+-   Websites (OSF, aspredicted, github, zenodo)
+
+# Preregistration: An illustration
+
+## Where to preregister?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+As predicted:
+
+-   Short: 9 questions
+-   All authors approve
+-   Does not become public until authors act to publish it
+:::
+
+::: {.column width="50%"}
+OSF:
+
+-   Large number of templates
+-   All participating authors can cancel within 48 hours
+-   Prereg can be kept private for up to four years but then gets published
+-   Withdrawing possible but leaves behind basic metadata
+-   Also allows to make scripts, materials, preprints public
+:::
+
+::::
+
+## OSF Preregistration templates
+
+![](images/osf_preregistration_templates.png){fig-align="center"}
+[^https://osf.io/zab38/wiki/home/]
+
+## Let's preregister our study
+
+-   We will use the standard OSF preregistration template
+-   Tip: download the template to your computer before filling out the online form
+
+# Reproducible research: A brief workshop
+
+## Papaja
+
+> papaja is short for ‘preparing APA journal articles’ and is the name of this R package designed to create fully reproducible journal articles that seamlessly fuse statistical analyses, simulations, and prose
+
+- papaja creates dynamic scientific reports
+- papaja ensures that manuscript complies to APA rules
+- Manual: http://frederikaust.com/papaja_man/
+
+## Getting started
+
+- Make sure that you have a recent version of Rstudio installed
+- Install a Tex distribution (tip: install tinytex)
+
+<section>
+  <pre><code data-trim data-noescape>
+if(!"tinytex" %in% rownames(installed.packages())) install.packages("tinytex")
+
+tinytex::install_tinytex()
+  </code></pre>
+</section>
+
+## Getting started
+
+- Install papaja package
+
+<section>
+  <pre><code data-trim data-noescape>
+# Install devtools package if necessary
+if(!"devtools" %in% rownames(installed.packages())) install.packages("devtools")
+
+# Install the stable development verions from GitHub
+devtools::install_github("crsh/papaja")
+
+# Install the latest development snapshot from GitHub
+devtools::install_github("crsh/papaja@devel")
+  </code></pre>
+</section>
+
+## Creating a document
+
+-   Go to File > New file > R markdown
+-   Click on "From Template"
+
+![](images/papaja1.png){fig-align="center"}
+
+## Creating a document
+
+-   Click on the "knit" button to create pdf, html, or word version of rmarkdown file
+-   When you open a new document from template, it already contains some placeholder information
+
+## Structure of document
+
+-   YAML front matter
+  -   Manuscript metadata
+  -   Rendering options
+-   Body
+  -   Uses markdown for layout (https://www.markdownguide.org/cheat-sheet/)
+  -   Can contain R code chunks
+
+## Citations
+
+-   Tip: Rmarkdown and papaja work really well in combination with zotero
+-   Create a .bib file with collection of references
+-   Add .bib file to YAML front matter
+-   Tip: the "citr" package provides an add-in to search and insert citations
+
+## Citations
+
+![](images/citations.png){fig-align="center"}
+
+## Let's add a dataset to our manuscript
+
+![](images/papaja2.png){fig-align="center"}
+
+## Numerical values
+
+![](images/papaja3.png){fig-align="center"}
+
+## Tables
+
+![](images/papaja4.png){fig-align="center"}
+
+## Results from statistical tests
+
+![](images/papaja5.png){fig-align="center"}
+
+## Results from statistical tests
+
+![](images/papaja6.png){fig-align="center"}
+
+## Figures
+
+![](images/papaja7.png){fig-align="center"}
+
+## Limitations
+
+-   Collaboration can be difficult when co-authors do not use rmarkdown
+-   Conversion to pdf works better than conversion to word
+-   Long-term computational reproducibility can be an issue as packages and R versions are updated. Docker can be a solution to this problem.
+
+## Personal note
+
+-   There are situations where a word document is easier than an Rmarkdown file
+-   It takes a while to get used to working with papaja
+-   Some experience with R is definitely needed!
+-   papaja can save you a ton of time when revising analyses!
+-   It is much easier for me to trace all the steps in a research process
+
+# Sharing research materials: An illustration
+
+## Available platforms
+
+-   Many repositories exist (https://www.re3data.org)
+-   "A data repository is an online platform that is used to deposit completed datasets with the purpose to publish, share and/or preserve them. A data repository is database infrastructure that compiles, manages and gives access to data and associated metadata and documentation."
+-   However, repositories can be used for more than just data
+-   Common repositories in our field include Open Science Framework (https://osf.io) and Zenodo (https://zenodo.org)
+
+## Let's share some materials about our study
+
+-   Create project in OSF
+
+## Concerns about sharing data
+
+-   Discussion: what concerns do you have about sharing data?
+
+# Concluding thoughts
+
+## Adopting open science tools: A worthy investment?
+
+-   Open science practices can help us strengthen the credibility and replicability of IO psychlogy research
+-   We need to acknowledge that adopting these practices takes time
+-   As an ECR, learning these practices and tools is a valuable skill
+-   As a senior researcher, we should not feel threatened by these practices and tools
+-   Widespread adaptation requires systemic changes
+-   We need to emphasize quality over quantity in research
+
+# Thank you for your attention
+
+## Bibliography

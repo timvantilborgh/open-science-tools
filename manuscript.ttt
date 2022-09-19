@@ -1,0 +1,74 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:descriptive}Descriptives of key variables by condition.}
+
+\begin{tabular}{llll}
+\toprule
+Variable & \multicolumn{1}{c}{control (n=40)} & \multicolumn{1}{c}{workshop (n=40)} & \multicolumn{1}{c}{Total (n=80)}\\
+\midrule
+Mean pretest (SD) & 3.86 (1.38) & 4.33 (1.55) & 4.10 (1.48)\\
+Mean posttest (SD) & 4.47 (1.30) & 6.14 (1.38) & 5.30 (1.58)\\
+Mean conscientiousness (SD) & 5.20 (1.01) & 4.91 (1.06) & 5.05 (1.04)\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:anova-example}A really beautiful ANOVA table.}
+
+\begin{tabular}{lllllll}
+\toprule
+Effect & \multicolumn{1}{c}{$\hat{\eta}^2_G$} & \multicolumn{1}{c}{90\% CI} & \multicolumn{1}{c}{$F$} & \multicolumn{1}{c}{$\mathit{df}$} & \multicolumn{1}{c}{$\mathit{df}_{\mathrm{res}}$} & \multicolumn{1}{c}{$p$}\\
+\midrule
+Condition & .137 & {}[.039, .260] & 12.02 & 1 & 76 & .001\\
+Gender & .010 & {}[.000, .076] & 0.73 & 1 & 76 & .394\\
+Condition $\times$ Gender & .001 & {}[.000, .002] & 0.08 & 1 & 76 & .780\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Note that the column names contain beautiful mathematical copy: This is because the table has variable labels.}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:regression-table}Results from regression model.}
+
+\begin{tabular}{llllll}
+\toprule
+Predictor & \multicolumn{1}{c}{$b$} & \multicolumn{1}{c}{95\% CI} & \multicolumn{1}{c}{$t$} & \multicolumn{1}{c}{$\mathit{df}$} & \multicolumn{1}{c}{$p$}\\
+\midrule
+Intercept & 0.38 & {}[-1.48, 2.24] & 0.41 & 77 & .687\\
+Conditionworkshop & 1.21 & {}[0.50, 1.93] & 3.40 & 77 & .001\\
+Conscientiousness & 0.04 & {}[-0.30, 0.39] & 0.25 & 77 & .802\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}

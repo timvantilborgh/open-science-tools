@@ -1,0 +1,194 @@
+---
+title             : "Tools to make science more open: An illustration of papaja"
+shorttitle        : "Open science tools"
+
+author: 
+  - name          : "Tim Vantilborgh"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Pleinlaan 2, 1050 Elsene, Belgium"
+    email         : "tim.vantilborgh@vub.be"
+    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+      - Conceptualization
+      - Formal Analysis
+      - Visualization
+      - Writing - Original Draft Preparation
+      - Writing - Review & Editing
+
+affiliation:
+  - id            : "1"
+    institution   : "Vrije Universiteit Brussel"
+
+authornote: |
+  Tim Vantilborgh: Work and Organizational Psychology research unit, Faculty of Psychology and Educational Sciences, Vrije Universiteit Brussel.
+
+  We would like to thank the Future of WOP meeting organizers to give us the chance to organize this workshop.
+
+abstract: |
+  The field of psychology is plagued by a replication crisis, and the domain of Work and Organizational psychology likely forms no exception to this. This crisis can be attributed to various reasons, such as p-hacking, underpowered studies, HARKing, and a focus on quantity over quality in scientific publishing. In response, various scholars have called for a widespread adoption of open science practices to improve the transparency, replicability, and credibility of psychological scientific research. The goal of this manuscript is to illustrate one particular open science tool: the use of papaja and rmarkdown to create reproducible reports. In this manuscript, we describe a fictitious experiment. A simulated dataset is analyzed, and we illustrate how R code can be integrated in a papaja rmarkdown document to analyze and report statistical results. With this illustration, we hope to demonstrate the usefulness of reproducible reports, encouraging FOWOP workshop participants to consider adopting open science tools themselves.
+  
+keywords          : "open science, reproducible reports, papaja, rmarkdown"
+wordcount         : "1007"
+
+bibliography      : ["r-references.bib", "bibliography.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+# Load libraries
+library("papaja")
+library("tidyverse")
+library("report")
+library("kableExtra")
+library("afex")
+
+# Set up references to R scripts in a bib file
+r_refs("r-references.bib")
+
+# Load dataset
+df = read_csv2("220908_simulated-data.csv")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+Let's add a sentence with a couple of references at the end [@alston2021, @cruwell2019, @lindsay2018]. 
+According to @cruwell2019, open science is an umbrella term that covers several concepts, including openness, transparency, rigour, reproducibility, replicability, and accumulation of knowledge.
+These two previous sentences illustrate the main ways to cite references in an rmarkdown file.
+It is also considered good practice to write each sentence on a new line in your rmarkdown script.
+This facilitates debugging, as error messages will explicitly refer to the line in your script containing the error.
+
+To start a new paragraph, simply leave one line blank and then start a new sentence.
+As you can see, papaja will automatically format your document in line with APA rules.
+The papaja package currently uses APA 6th edition, but the authors are working on an update with APA 7th edition rules.
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+## Participants
+
+Our simulated sample consists of `r length(df$id)` participants. 
+`r printnum(sum(df$condition %in% "work"), numerals=FALSE, capitalize=TRUE)` participants were randomly assigned to the workshop condition, while the remaining `r printnum(sum(df$condition %in% "contr"))` participants were randomly assigned to the control condition.
+`r printnum(sum(df$gender %in% "male"), numerals=FALSE, capitalize=TRUE)` participants were male, while `r printnum(sum(df$gender %in% "female"))` participants were female.
+On average, participants were `r printnum(mean(df$age))` years old ($SD = `r sd(df$age)`$ years).
+
+## Material
+
+We used a single-item measure to assess the dependent variable--positive attitude towards open science practices.
+This single-item was administered in the pretest and posttest.
+We created a new variable--delta--by subtracting pretest scores from posttest scores.
+This delta variable thus captures change in positive attitude to open science practices.
+
+We included conscientiousness as a control variable, which was measured with two items from the Ten Item Personality Inventory.
+There was a strong, positive correlation between both items ($r = `r printnum(cor(df$consc1, df$consc2))`$), offering support for the reliability of the measure.
+
+## Procedure
+
+This is a fictitious experiment!
+We used a between-subject pretest posttest design.
+Participants were randomly assigned to one of the conditions.
+In the workshop condition, participants participated in a 2-hour workshop on tools to make science more open. 
+In the control condition, participants followed a 2-hour workshop on a topic that was unrelated to open science practices.
+Both workshops used the same instructor and were taught on the same day and time.
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses. The dataset can be downloaded from .
+
+# Results
+
+Table 1 shows the means and standard deviations of the dependent variable pretest and posttest measures and of the conscientiousness control variable by condition.
+
+```{r descriptive}
+df %>%
+  select(pretest, posttest, conscientiousness, condition) %>%
+  report_sample(
+    group_by = "condition"
+  ) %>%
+  apa_table(
+    .,
+    caption = "Descriptives of key variables by condition.",
+    escape=TRUE
+  )
+```
+
+As can be seen in the rmarkdown file, we use an r code chunk.
+This contains r code that will be executed and the output will be returned to the rmarkdown document.
+Each code chunk is given a name; in this case our code chunk is labelled "descriptive".
+This code chunk selects a couple of variables from the dataset, then uses the report function from the report package to create a descriptives table, and finally uses the apa_table function from the papaja package to format the table according to APA rules.
+
+## Testing hypotheses
+
+### ANOVA
+
+```{r, anova-example}
+m1 = aov_ez(
+  data=df,
+  dv="delta",
+  id="id",
+  between=c("condition", "gender")
+)
+
+m1_apa = apa_print(m1)
+
+apa_table(
+  m1_apa$table
+  , caption = "A really beautiful ANOVA table."
+  , note = "Note that the column names contain beautiful mathematical copy: This is because the table has variable labels."
+)
+```
+
+Condition(`r m1_apa$full$condition`) affected change in positive attitude to open science practices. 
+Gender was not related to change in positive attitude to open science practices, `r m1_apa$full$gender`.
+There was no significant interaction effect between condition and gender, `r m1_apa$full$condition_gender`.
+
+```{r, beeplot}
+apa_beeplot(
+  data = df
+  , id = "id"
+  , dv = "delta"
+  , factors = c("condition","gender")
+)
+```
+
+### Regression
+
+```{r, regression-example, results="asis"}
+m2 = lm(delta ~ condition + conscientiousness, data=df)
+print(report(m2))
+```
+
+```{r, regression-table}
+apa_m2 = apa_print(m2)
+apa_table(apa_m2$table,
+          caption = "Results from regression model.",
+          escape=TRUE)
+```
+
+# Discussion
+
+An added benefit of rmarkdown and papaja is that you can simulate your data prior to data collection and already prepare your script with analyses.
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
