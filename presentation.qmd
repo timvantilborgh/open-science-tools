@@ -1,20 +1,24 @@
 ---
 title: "Using tools to make science more open"
+subtitle: "Future of WOP meeting 2022 - Brussels"
 author: "Tim Vantilborgh"
+date: "23/9/2022"
 bibliography: "bibliography.bib"
 format: 
   revealjs:
-    theme: moon
+    theme: serif
+    footer: "Using tools to make science more open"
+    logo: "images/logo.png"
 editor: visual
 ---
 
 # Introduction
 
-## A couple of questions
+## Warning
 
-<iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
+> The following presentation leans heavily on a positivist perspective
 
-</iframe>
+![](images/meme.jpg){fig-align="center"}
 
 ## A couple of questions
 
@@ -24,17 +28,17 @@ editor: visual
 
 ## Replication crisis in psychology
 
-![@opensciencecollaboration2015](images/replication_crisis.jpeg){fig-align="center" width=60%}
+![@opensciencecollaboration2015](images/replication_crisis.jpeg){fig-align="center" width="60%"}
 
-::: {.notes}
-The mean effect size (r) of the replication effects (Mr = 0.197, SD = 0.257) was half the magnitude of the mean effect size of the original effects (Mr = 0.403, SD = 0.188), representing a substantial decline. Ninety-seven percent of original studies had significant results (P < .05). Thirty-six percent of replications had significant results; 47% of original effect sizes were in the 95% confidence interval of the replication effect size; 39% of effects were subjectively rated to have replicated the original result; and if no bias in original results is assumed, combining original and replication results left 68% with statistically significant effects.
+::: notes
+The mean effect size (r) of the replication effects (Mr = 0.197, SD = 0.257) was half the magnitude of the mean effect size of the original effects (Mr = 0.403, SD = 0.188), representing a substantial decline. Ninety-seven percent of original studies had significant results (P \< .05). Thirty-six percent of replications had significant results; 47% of original effect sizes were in the 95% confidence interval of the replication effect size; 39% of effects were subjectively rated to have replicated the original result; and if no bias in original results is assumed, combining original and replication results left 68% with statistically significant effects.
 :::
 
 ## The four horsemen and the replication crisis
 
 ![](images/4horsemen.png){fig-align="center"}
 
-## A possible solution: Open science practices
+## A possible solution: Open science
 
 <iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
 
@@ -63,8 +67,9 @@ The mean effect size (r) of the replication effects (Mr = 0.197, SD = 0.257) was
 
 ## Practical aspects
 
--   Ideally, you have a laptop with an internet connection and R + Rstudio installed
--   All materials can be downloaded from:
+-   Ideally, you have a laptop with an internet connection and R <https://cran.r-project.org> + Rstudio <https://www.rstudio.com/products/rstudio/download/> installed
+-   All materials can be downloaded from: <https://github.com/timvantilborgh/open-science-tools>
+-   Check slides: <https://timvantilborgh.github.io/open-science-tools/presentation.html#/title-slide>
 
 # Brief introduction to open science practices
 
@@ -72,9 +77,9 @@ The mean effect size (r) of the replication effects (Mr = 0.197, SD = 0.257) was
 
 Example Eric-Jan Wagenmakers:
 
--   Dr. X has a favorite theory that she has worked on and published about previously.
--   Dr. X designs an experiment to test a prediction from her theory.
--   Dr. X collects the data, a painstaking and costly process. Part of her career and those of her students ride on the outcome.
+-   Dr. X has a favorite theory that (s)he has worked on and published about previously.
+-   Dr. X designs an experiment to test a prediction from her/his theory.
+-   Dr. X collects the data, a painstaking and costly process. Part of her/his career and those of her/his students ride on the outcome.
 
 ## Why do we need open science?
 
@@ -96,8 +101,21 @@ Who is, without a shadow of a doubt, the most biased analyst in the entire galax
 
 ## Why do we need open science?
 
--   Data are analyzed with no accountability, by the person who is easiest to fool, often with limited statistical training, who has every incentive imaginable to produce p \< .05. 
+-   Data are analyzed with no accountability, by the person who is easiest to fool, often with limited statistical training, who has every incentive imaginable to produce p \< .05.
 -   When p \< .05, the result is declared "significant"and any further doubt is frowned upon.
+
+## Why do we need open science?
+
+-   Evil scientists who fabricate and falsify data are not the main reason for the reproducibility crisis
+-   Most researchers have good intentions, but easily fool themselves while doing research
+
+![](images/meme2.jpeg){fig-align="right"}
+
+## A plea for slow science
+
+-   By slowing down and focusing on quality over quantity, we can improve replicability of scientific findings
+-   "slow science urges rethinking the current university, against the fast, competitive, benchmarked research that not only restricts the choice of research topics and curricula but also threatens the quality of the knowledge" <https://slowscience.be/the-slow-science-manifesto-2/>
+-   "Slow science is open science"
 
 ## What is open science?
 
@@ -137,34 +155,6 @@ Who is, without a shadow of a doubt, the most biased analyst in the entire galax
 -   Prevents researchers from fooling themselves
 -   Does not rule out exploratory findings; just labels them accordingly
 
-## Exploratory vs confirmatory research
-
-:::: {.columns}
-
-::: {.column width="50%"}
-#### Exploratory
-
--   Hypothesis generating
--   Results require replication
--   Data-dependent
--   Minimizes false negatives
--   p-values lose diagnostic value
--   Noinferences to wider population
-:::
-
-::: {.column width="50%"}
-#### Confirmatory
-
--   Hypothesis testing
--   Results are held to the highest standards
--   Data-independent
--   Minimizes false positives
--   p-values retain diagnostic value
--   Inferences may be drawn to wider population
-:::
-
-::::
-
 ## Why preregister?
 
 -   Makes the research process more transparent
@@ -178,20 +168,19 @@ Who is, without a shadow of a doubt, the most biased analyst in the entire galax
 
 > Research is reproducible when others can reproduce the results of a scientific study given only the original data, code, and documentation [@alston2021]
 
-## What are benefits of reproducible research?
+## Benefits of reproducible research?
 
 @alston2021:
 
 -   A log of all steps taken in the research process
--   Easy to update analyses
--   Easy to reuse materials and save time
+-   Easy to update analyses, reuse materials and save time
 -   Signals rigor, transparency, and trustworthiness
 -   Increases citation rate
 -   Allows others to learn from your work
 -   Simplifies follow-up research
 -   Prevents mistakes from compounding over time
 
-## What are challenges of reproducible research?
+## Challenges of reproducible research?
 
 @alston2021:
 
@@ -205,7 +194,7 @@ Who is, without a shadow of a doubt, the most biased analyst in the entire galax
 
 > Sharing relevant research material (data, code, questionnaire, stimuli, lab notebook, ...) and/or research output (presentations, manuscripts) with the broader public.
 
-## What are benefits of open materials?
+## Benefits of open materials?
 
 -   Verification
 -   Reproducability
@@ -233,32 +222,25 @@ Who is, without a shadow of a doubt, the most biased analyst in the entire galax
 
 ## Where to preregister?
 
-:::: {.columns}
-
-::: {.column width="50%"}
-As predicted:
+aspredicted (https://aspredicted.org):
 
 -   Short: 9 questions
 -   All authors approve
 -   Does not become public until authors act to publish it
-:::
 
-::: {.column width="50%"}
-OSF:
+## Where to preregister?
+
+Open Science Framework (https://osf.io):
 
 -   Large number of templates
 -   All participating authors can cancel within 48 hours
 -   Prereg can be kept private for up to four years but then gets published
 -   Withdrawing possible but leaves behind basic metadata
 -   Also allows to make scripts, materials, preprints public
-:::
-
-::::
 
 ## OSF Preregistration templates
 
-![](images/osf_preregistration_templates.png){fig-align="center"}
-[^https://osf.io/zab38/wiki/home/]
+![](images/osf_preregistration_templates.png){fig-align="center"} \[\^https://osf.io/zab38/wiki/home/\]
 
 ## Let's preregister our study
 
@@ -267,33 +249,40 @@ OSF:
 
 # Reproducible research: A brief workshop
 
+## Another warning {background-image="images/meme3.jpg" background-size="500px"}
+
 ## Papaja
 
-> papaja is short for ‘preparing APA journal articles’ and is the name of this R package designed to create fully reproducible journal articles that seamlessly fuse statistical analyses, simulations, and prose
+> papaja is short for 'preparing APA journal articles' and is the name of this R package designed to create fully reproducible journal articles that seamlessly fuse statistical analyses, simulations, and prose
 
-- papaja creates dynamic scientific reports
-- papaja ensures that manuscript complies to APA rules
-- Manual: http://frederikaust.com/papaja_man/
+-   papaja creates dynamic scientific reports
+-   papaja ensures that manuscript complies to APA rules
+-   Manual: <http://frederikaust.com/papaja_man/>
 
 ## Getting started
 
-- Make sure that you have a recent version of Rstudio installed
-- Install a Tex distribution (tip: install tinytex)
+-   Make sure that you have a recent version of Rstudio installed
+-   Install a Tex distribution (tip: install tinytex)
 
 <section>
-  <pre><code data-trim data-noescape>
+
+```{=html}
+<pre><code data-trim data-noescape>
 if(!"tinytex" %in% rownames(installed.packages())) install.packages("tinytex")
 
 tinytex::install_tinytex()
   </code></pre>
+```
 </section>
 
 ## Getting started
 
-- Install papaja package
+-   Install papaja package
 
 <section>
-  <pre><code data-trim data-noescape>
+
+```{=html}
+<pre><code data-trim data-noescape>
 # Install devtools package if necessary
 if(!"devtools" %in% rownames(installed.packages())) install.packages("devtools")
 
@@ -303,11 +292,12 @@ devtools::install_github("crsh/papaja")
 # Install the latest development snapshot from GitHub
 devtools::install_github("crsh/papaja@devel")
   </code></pre>
+```
 </section>
 
 ## Creating a document
 
--   Go to File > New file > R markdown
+-   Go to File \> New file \> R markdown
 -   Click on "From Template"
 
 ![](images/papaja1.png){fig-align="center"}
@@ -320,11 +310,11 @@ devtools::install_github("crsh/papaja@devel")
 ## Structure of document
 
 -   YAML front matter
-  -   Manuscript metadata
-  -   Rendering options
+-   Manuscript metadata
+-   Rendering options
 -   Body
-  -   Uses markdown for layout (https://www.markdownguide.org/cheat-sheet/)
-  -   Can contain R code chunks
+-   Uses markdown for layout <https://www.markdownguide.org/cheat-sheet/>
+-   Can contain R code chunks
 
 ## Citations
 
@@ -379,30 +369,35 @@ devtools::install_github("crsh/papaja@devel")
 
 ## Available platforms
 
--   Many repositories exist (https://www.re3data.org)
--   "A data repository is an online platform that is used to deposit completed datasets with the purpose to publish, share and/or preserve them. A data repository is database infrastructure that compiles, manages and gives access to data and associated metadata and documentation."
+-   Many repositories exist <https://www.re3data.org>
+-   "A data repository is an online platform that is used to deposit completed datasets with the purpose to publish, share and/or preserve them."
 -   However, repositories can be used for more than just data
--   Common repositories in our field include Open Science Framework (https://osf.io) and Zenodo (https://zenodo.org)
+-   Common repositories in our field include Open Science Framework <https://osf.io> and Zenodo <https://zenodo.org>
 
 ## Let's share some materials about our study
 
 -   Create project in OSF
 
-## Concerns about sharing data
-
--   Discussion: what concerns do you have about sharing data?
-
 # Concluding thoughts
 
 ## Adopting open science tools: A worthy investment?
 
--   Open science practices can help us strengthen the credibility and replicability of IO psychlogy research
--   We need to acknowledge that adopting these practices takes time
+-   Open science practices can help us strengthen the credibility and replicability of IO psychology research
+-   Acknowledge that adopting these practices takes time
 -   As an ECR, learning these practices and tools is a valuable skill
--   As a senior researcher, we should not feel threatened by these practices and tools
 -   Widespread adaptation requires systemic changes
 -   We need to emphasize quality over quantity in research
 
+## The role of FOWOP?
+
+<iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
+
+</iframe>
+
 # Thank you for your attention
+
+Email: [tim.vantilborgh\@vub.be](tim.vantilborgh@vub.be)
+
+Twitter: <https://twitter.com/timvantilborgh>
 
 ## Bibliography
