@@ -66,46 +66,30 @@ set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```
 
-Let's add a sentence with a couple of references at the end [@alston2021, @cruwell2019, @lindsay2018]. 
-According to @cruwell2019, open science is an umbrella term that covers several concepts, including openness, transparency, rigour, reproducibility, replicability, and accumulation of knowledge.
-These two previous sentences illustrate the main ways to cite references in an rmarkdown file.
-It is also considered good practice to write each sentence on a new line in your rmarkdown script.
-This facilitates debugging, as error messages will explicitly refer to the line in your script containing the error.
+Let's add a sentence with a couple of references at the end [@alston2021, @cruwell2019, @lindsay2018]. According to @cruwell2019, open science is an umbrella term that covers several concepts, including openness, transparency, rigour, reproducibility, replicability, and accumulation of knowledge. These two previous sentences illustrate the main ways to cite references in an rmarkdown file. It is also considered good practice to write each sentence on a new line in your rmarkdown script. This facilitates debugging, as error messages will explicitly refer to the line in your script containing the error.
 
-To start a new paragraph, simply leave one line blank and then start a new sentence.
-As you can see, papaja will automatically format your document in line with APA rules.
-The papaja package currently uses APA 6th edition, but the authors are working on an update with APA 7th edition rules.
+To start a new paragraph, simply leave one line blank and then start a new sentence. As you can see, papaja will automatically format your document in line with APA rules. The papaja package currently uses APA 6th edition, but the authors are working on an update with APA 7th edition rules.
 
 # Methods
+
 We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
 ## Participants
 
-Our simulated sample consists of `r length(df$id)` participants. 
-`r printnum(sum(df$condition %in% "work"), numerals=FALSE, capitalize=TRUE)` participants were randomly assigned to the workshop condition, while the remaining `r printnum(sum(df$condition %in% "contr"))` participants were randomly assigned to the control condition.
-`r printnum(sum(df$gender %in% "male"), numerals=FALSE, capitalize=TRUE)` participants were male, while `r printnum(sum(df$gender %in% "female"))` participants were female.
-On average, participants were `r printnum(mean(df$age))` years old ($SD = `r sd(df$age)`$ years).
+Our simulated sample consists of `r length(df$id)` participants. `r printnum(sum(df$condition %in% "work"), numerals=FALSE, capitalize=TRUE)` participants were randomly assigned to the workshop condition, while the remaining `r printnum(sum(df$condition %in% "contr"))` participants were randomly assigned to the control condition. `r printnum(sum(df$gender %in% "male"), numerals=FALSE, capitalize=TRUE)` participants were male, while `r printnum(sum(df$gender %in% "female"))` participants were female. On average, participants were `r printnum(mean(df$age))` years old ($SD = `r sd(df$age)`$ years).
 
 ## Material
 
-We used a single-item measure to assess the dependent variable--positive attitude towards open science practices.
-This single-item was administered in the pretest and posttest.
-We created a new variable--delta--by subtracting pretest scores from posttest scores.
-This delta variable thus captures change in positive attitude to open science practices.
+We used a single-item measure to assess the dependent variable--positive attitude towards open science practices. This single-item was administered in the pretest and posttest. We created a new variable--delta--by subtracting pretest scores from posttest scores. This delta variable thus captures change in positive attitude to open science practices.
 
-We included conscientiousness as a control variable, which was measured with two items from the Ten Item Personality Inventory.
-There was a strong, positive correlation between both items ($r = `r printnum(cor(df$consc1, df$consc2))`$), offering support for the reliability of the measure.
+We included conscientiousness as a control variable, which was measured with two items from the Ten Item Personality Inventory. There was a strong, positive correlation between both items ($r = `r printnum(cor(df$consc1, df$consc2))`$), offering support for the reliability of the measure.
 
 ## Procedure
 
-This is a fictitious experiment!
-We used a between-subject pretest posttest design.
-Participants were randomly assigned to one of the conditions.
-In the workshop condition, participants participated in a 2-hour workshop on tools to make science more open. 
-In the control condition, participants followed a 2-hour workshop on a topic that was unrelated to open science practices.
-Both workshops used the same instructor and were taught on the same day and time.
+This is a fictitious experiment! We used a between-subject pretest posttest design. Participants were randomly assigned to one of the conditions. In the workshop condition, participants participated in a 2-hour workshop on tools to make science more open. In the control condition, participants followed a 2-hour workshop on a topic that was unrelated to open science practices. Both workshops used the same instructor and were taught on the same day and time.
 
 ## Data analysis
+
 We used `r cite_r("r-references.bib")` for all our analyses. The dataset can be downloaded from .
 
 # Results
@@ -125,10 +109,7 @@ df %>%
   )
 ```
 
-As can be seen in the rmarkdown file, we use an r code chunk.
-This contains r code that will be executed and the output will be returned to the rmarkdown document.
-Each code chunk is given a name; in this case our code chunk is labelled "descriptive".
-This code chunk selects a couple of variables from the dataset, then uses the report function from the report package to create a descriptives table, and finally uses the apa_table function from the papaja package to format the table according to APA rules.
+As can be seen in the rmarkdown file, we use an r code chunk. This contains r code that will be executed and the output will be returned to the rmarkdown document. Each code chunk is given a name; in this case our code chunk is labelled "descriptive". This code chunk selects a couple of variables from the dataset, then uses the report function from the report package to create a descriptives table, and finally uses the apa_table function from the papaja package to format the table according to APA rules.
 
 ## Testing hypotheses
 
@@ -151,9 +132,7 @@ apa_table(
 )
 ```
 
-Condition(`r m1_apa$full$condition`) affected change in positive attitude to open science practices. 
-Gender was not related to change in positive attitude to open science practices, `r m1_apa$full$gender`.
-There was no significant interaction effect between condition and gender, `r m1_apa$full$condition_gender`.
+Condition(`r m1_apa$full$condition`) affected change in positive attitude to open science practices. Gender was not related to change in positive attitude to open science practices, `r m1_apa$full$gender`. There was no significant interaction effect between condition and gender, `r m1_apa$full$condition_gender`.
 
 ```{r, beeplot}
 apa_beeplot(
@@ -186,9 +165,14 @@ An added benefit of rmarkdown and papaja is that you can simulate your data prio
 
 # References
 
+```{=tex}
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
+```
+::: {#refs custom-style="Bibliography"}
+:::
 
-<div id="refs" custom-style="Bibliography"></div>
+```{=tex}
 \endgroup
+```

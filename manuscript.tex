@@ -210,15 +210,9 @@ The field of psychology is plagued by a replication crisis, and the domain of Wo
 \begin{document}
 \maketitle
 
-Let's add a sentence with a couple of references at the end Lindsay (2018).
-According to Crüwell et al. (2019), open science is an umbrella term that covers several concepts, including openness, transparency, rigour, reproducibility, replicability, and accumulation of knowledge.
-These two previous sentences illustrate the main ways to cite references in an rmarkdown file.
-It is also considered good practice to write each sentence on a new line in your rmarkdown script.
-This facilitates debugging, as error messages will explicitly refer to the line in your script containing the error.
+Let's add a sentence with a couple of references at the end Lindsay (2018). According to Crüwell et al. (2019), open science is an umbrella term that covers several concepts, including openness, transparency, rigour, reproducibility, replicability, and accumulation of knowledge. These two previous sentences illustrate the main ways to cite references in an rmarkdown file. It is also considered good practice to write each sentence on a new line in your rmarkdown script. This facilitates debugging, as error messages will explicitly refer to the line in your script containing the error.
 
-To start a new paragraph, simply leave one line blank and then start a new sentence.
-As you can see, papaja will automatically format your document in line with APA rules.
-The papaja package currently uses APA 6th edition, but the authors are working on an update with APA 7th edition rules.
+To start a new paragraph, simply leave one line blank and then start a new sentence. As you can see, papaja will automatically format your document in line with APA rules. The papaja package currently uses APA 6th edition, but the authors are working on an update with APA 7th edition rules.
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
@@ -228,36 +222,24 @@ We report how we determined our sample size, all data exclusions (if any), all m
 \hypertarget{participants}{%
 \subsection{Participants}\label{participants}}
 
-Our simulated sample consists of 80 participants.
-No participants were randomly assigned to the workshop condition, while the remaining 0 participants were randomly assigned to the control condition.
-Thirty-eight participants were male, while 42 participants were female.
-On average, participants were 39.23 years old (\(SD = 8.72\) years).
+Our simulated sample consists of 80 participants. No participants were randomly assigned to the workshop condition, while the remaining 0 participants were randomly assigned to the control condition. Thirty-eight participants were male, while 42 participants were female. On average, participants were 39.23 years old (\(SD = 8.72\) years).
 
 \hypertarget{material}{%
 \subsection{Material}\label{material}}
 
-We used a single-item measure to assess the dependent variable--positive attitude towards open science practices.
-This single-item was administered in the pretest and posttest.
-We created a new variable--delta--by subtracting pretest scores from posttest scores.
-This delta variable thus captures change in positive attitude to open science practices.
+We used a single-item measure to assess the dependent variable--positive attitude towards open science practices. This single-item was administered in the pretest and posttest. We created a new variable--delta--by subtracting pretest scores from posttest scores. This delta variable thus captures change in positive attitude to open science practices.
 
-We included conscientiousness as a control variable, which was measured with two items from the Ten Item Personality Inventory.
-There was a strong, positive correlation between both items (\(r = 0.91\)), offering support for the reliability of the measure.
+We included conscientiousness as a control variable, which was measured with two items from the Ten Item Personality Inventory. There was a strong, positive correlation between both items (\(r = 0.91\)), offering support for the reliability of the measure.
 
 \hypertarget{procedure}{%
 \subsection{Procedure}\label{procedure}}
 
-This is a fictitious experiment!
-We used a between-subject pretest posttest design.
-Participants were randomly assigned to one of the conditions.
-In the workshop condition, participants participated in a 2-hour workshop on tools to make science more open.
-In the control condition, participants followed a 2-hour workshop on a topic that was unrelated to open science practices.
-Both workshops used the same instructor and were taught on the same day and time.
+This is a fictitious experiment! We used a between-subject pretest posttest design. Participants were randomly assigned to one of the conditions. In the workshop condition, participants participated in a 2-hour workshop on tools to make science more open. In the control condition, participants followed a 2-hour workshop on a topic that was unrelated to open science practices. Both workshops used the same instructor and were taught on the same day and time.
 
 \hypertarget{data-analysis}{%
 \subsection{Data analysis}\label{data-analysis}}
 
-We used R (Version 4.1.0; R Core Team, 2021) and the R-packages \emph{afex} (Version 1.1.1; Singmann, Bolker, Westfall, Aust, \& Ben-Shachar, 2022), \emph{dplyr} (Version 1.0.8; Wickham, François, Henry, \& Müller, 2022), \emph{forcats} (Version 0.5.1; Wickham, 2021), \emph{ggplot2} (Version 3.3.5; Wickham, 2016), \emph{kableExtra} (Version 1.3.4; Zhu, 2021), \emph{lme4} (Version 1.1.27.1; Bates, Mächler, Bolker, \& Walker, 2015), \emph{Matrix} (Version 1.3.3; Bates \& Maechler, 2021), \emph{papaja} (Version 0.1.1; Aust \& Barth, 2020), \emph{purrr} (Version 0.3.4; Henry \& Wickham, 2020), \emph{readr} (Version 2.1.2; Wickham, Hester, \& Bryan, 2022), \emph{report} (Version 0.5.5; Makowski, Ben-Shachar, Patil, \& Lüdecke, 2021), \emph{stringr} (Version 1.4.0; Wickham, 2019), \emph{tibble} (Version 3.1.6; Müller \& Wickham, 2021), \emph{tidyr} (Version 1.2.0; Wickham \& Girlich, 2022), \emph{tidyverse} (Version 1.3.2; Wickham et al., 2019), and \emph{tinylabels} (Version 0.2.3; Barth, 2022) for all our analyses. The dataset can be downloaded from .
+We used R (Version 4.1.2; R Core Team, 2021) and the R-packages \emph{afex} (Version 1.1.0; Singmann, Bolker, Westfall, Aust, \& Ben-Shachar, 2022), \emph{dplyr} (Version 1.0.10; Wickham, François, Henry, \& Müller, 2022), \emph{forcats} (Version 0.5.1; Wickham, 2021), \emph{ggplot2} (Version 3.3.6; Wickham, 2016), \emph{kableExtra} (Version 1.3.4; Zhu, 2021), \emph{lme4} (Version 1.1.27.1; Bates, Mächler, Bolker, \& Walker, 2015), \emph{Matrix} (Version 1.3.4; Bates \& Maechler, 2021), \emph{papaja} (Version 0.1.1; Aust \& Barth, 2020), \emph{purrr} (Version 0.3.4; Henry \& Wickham, 2020), \emph{readr} (Version 2.1.0; Wickham, Hester, \& Bryan, 2022), \emph{report} (Version 0.5.1; Makowski, Ben-Shachar, Patil, \& Lüdecke, 2021), \emph{stringr} (Version 1.4.1; Wickham, 2019), \emph{tibble} (Version 3.1.8; Müller \& Wickham, 2021), \emph{tidyr} (Version 1.2.0; Wickham \& Girlich, 2022), \emph{tidyverse} (Version 1.3.1; Wickham et al., 2019), and \emph{tinylabels} (Version 0.2.3; Barth, 2022) for all our analyses. The dataset can be downloaded from .
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
@@ -286,10 +268,7 @@ Mean conscientiousness (SD) & 5.20 (1.01) & 4.91 (1.06) & 5.05 (1.04)\\
 
 \end{table}
 
-As can be seen in the rmarkdown file, we use an r code chunk.
-This contains r code that will be executed and the output will be returned to the rmarkdown document.
-Each code chunk is given a name; in this case our code chunk is labelled ``descriptive''.
-This code chunk selects a couple of variables from the dataset, then uses the report function from the report package to create a descriptives table, and finally uses the apa\_table function from the papaja package to format the table according to APA rules.
+As can be seen in the rmarkdown file, we use an r code chunk. This contains r code that will be executed and the output will be returned to the rmarkdown document. Each code chunk is given a name; in this case our code chunk is labelled ``descriptive''. This code chunk selects a couple of variables from the dataset, then uses the report function from the report package to create a descriptives table, and finally uses the apa\_table function from the papaja package to format the table according to APA rules.
 
 \hypertarget{testing-hypotheses}{%
 \subsection{Testing hypotheses}\label{testing-hypotheses}}
@@ -324,59 +303,35 @@ Condition $\times$ Gender & .001 & {}[.000, .002] & 0.08 & 1 & 76 & .780\\
 
 \end{table}
 
-Condition(\(F(1, 76) = 12.02\), \(p = .001\), \(\hat{\eta}^2_G = .137\), 90\% CI \([.039, .260]\)) affected change in positive attitude to open science practices.
-Gender was not related to change in positive attitude to open science practices, \(F(1, 76) = 0.73\), \(p = .394\), \(\hat{\eta}^2_G = .010\), 90\% CI \([.000, .076]\).
-There was no significant interaction effect between condition and gender, \(F(1, 76) = 0.08\), \(p = .780\), \(\hat{\eta}^2_G = .001\), 90\% CI \([.000, .002]\).
+Condition(\(F(1, 76) = 12.02\), \(p = .001\), \(\hat{\eta}^2_G = .137\), 90\% CI \([.039, .260]\)) affected change in positive attitude to open science practices. Gender was not related to change in positive attitude to open science practices, \(F(1, 76) = 0.73\), \(p = .394\), \(\hat{\eta}^2_G = .010\), 90\% CI \([.000, .076]\). There was no significant interaction effect between condition and gender, \(F(1, 76) = 0.08\), \(p = .780\), \(\hat{\eta}^2_G = .001\), 90\% CI \([.000, .002]\).
 
 \includegraphics{manuscript_files/figure-latex/beeplot-1.pdf}
 
 \hypertarget{regression}{%
 \subsubsection{Regression}\label{regression}}
 
-We fitted a linear model (estimated using OLS) to predict delta with condition
-(formula: delta \textasciitilde{} condition + conscientiousness). The model explains a
-statistically significant and moderate proportion of variance (R2 = 0.13, F(2,
-77) = 5.79, p = 0.005, adj. R2 = 0.11). The model's intercept, corresponding to
-condition = control, is at 0.38 (95\% CI {[}-1.48, 2.24{]}, t(77) = 0.41, p =
-0.687). Within this model:
+\begin{verbatim}
+## Warning: 'data_findcols()' is deprecated and will be removed in a future update.
+##   Its usage is discouraged. Please use 'data_find()' instead.
+
+## Warning: 'data_findcols()' is deprecated and will be removed in a future update.
+##   Its usage is discouraged. Please use 'data_find()' instead.
+
+## Warning: 'data_findcols()' is deprecated and will be removed in a future update.
+##   Its usage is discouraged. Please use 'data_find()' instead.
+\end{verbatim}
+
+We fitted a linear model (estimated using OLS) to predict delta with condition and conscientiousness (formula: delta \textasciitilde{} condition + conscientiousness). The model explains a statistically significant and moderate proportion of variance (R2 = 0.13, F(2, 77) = 5.79, p = 0.005, adj. R2 = 0.11). The model's intercept, corresponding to condition = control and conscientiousness = 0, is at 0.38 (95\% CI {[}-1.48, 2.24{]}, t(77) = 0.41, p = 0.687). Within this model:
 
 \begin{itemize}
 \tightlist
 \item
-  The effect of condition {[}workshop{]} is statistically significant and positive
-  (beta = 1.21, 95\% CI {[}0.50, 1.93{]}, t(77) = 3.40, p = 0.001; Std. beta = 0.72,
-  95\% CI {[}0.30, 1.15{]})
+  The effect of condition {[}workshop{]} is statistically significant and positive (beta = 1.21, 95\% CI {[}0.50, 1.93{]}, t(77) = 3.40, p = 0.001; Std. beta = 0.72, 95\% CI {[}0.30, 1.15{]})
 \item
-  The effect of conscientiousness is statistically non-significant and positive
-  (beta = 0.04, 95\% CI {[}-0.30, 0.39{]}, t(77) = 0.25, p = 0.802; Std. beta = 0.03,
-  95\% CI {[}-0.19, 0.24{]})
+  The effect of conscientiousness is statistically non-significant and positive (beta = 0.04, 95\% CI {[}-0.30, 0.39{]}, t(77) = 0.25, p = 0.802; Std. beta = 0.03, 95\% CI {[}-0.19, 0.24{]})
 \end{itemize}
 
-Standardized parameters were obtained by fitting the model on a standardized
-version of the dataset. 95\% Confidence Intervals (CIs) and p-values were
-computed using a Wald t-distribution approximation. and We fitted a linear
-model (estimated using OLS) to predict delta with conscientiousness (formula:
-delta \textasciitilde{} condition + conscientiousness). The model explains a statistically
-significant and moderate proportion of variance (R2 = 0.13, F(2, 77) = 5.79, p
-= 0.005, adj. R2 = 0.11). The model's intercept, corresponding to
-conscientiousness = 0, is at 0.38 (95\% CI {[}-1.48, 2.24{]}, t(77) = 0.41, p =
-0.687). Within this model:
-
-\begin{itemize}
-\tightlist
-\item
-  The effect of condition {[}workshop{]} is statistically significant and positive
-  (beta = 1.21, 95\% CI {[}0.50, 1.93{]}, t(77) = 3.40, p = 0.001; Std. beta = 0.72,
-  95\% CI {[}0.30, 1.15{]})
-\item
-  The effect of conscientiousness is statistically non-significant and positive
-  (beta = 0.04, 95\% CI {[}-0.30, 0.39{]}, t(77) = 0.25, p = 0.802; Std. beta = 0.03,
-  95\% CI {[}-0.19, 0.24{]})
-\end{itemize}
-
-Standardized parameters were obtained by fitting the model on a standardized
-version of the dataset. 95\% Confidence Intervals (CIs) and p-values were
-computed using a Wald t-distribution approximation.
+Standardized parameters were obtained by fitting the model on a standardized version of the dataset. 95\% Confidence Intervals (CIs) and p-values were computed using the Wald approximation.
 
 \begin{table}[tbp]
 

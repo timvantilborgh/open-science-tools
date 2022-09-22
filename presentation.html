@@ -6,7 +6,7 @@
 <script src="presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="presentation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Tim Vantilborgh">
@@ -333,13 +333,15 @@
     }
   </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="center">
   <h1 class="title">Using tools to make science more open</h1>
+  <p class="subtitle">Future of WOP meeting 2022 - Brussels</p>
   <p class="author">Tim Vantilborgh</p>
+  <p class="date">23/9/2022</p>
 </section>
 
 <section>
@@ -347,12 +349,14 @@
 <h1>Introduction</h1>
 
 </section>
+<section id="warning" class="slide level2">
+<h2>Warning</h2>
+<blockquote>
+<p>The following presentation leans heavily on a positivist perspective</p>
+</blockquote>
+
+<img data-src="images/meme.jpg" class="r-stretch quarto-figure-center"></section>
 <section id="a-couple-of-questions" class="slide level2">
-<h2>A couple of questions</h2>
-<iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
-</iframe>
-</section>
-<section id="a-couple-of-questions-1" class="slide level2">
 <h2>A couple of questions</h2>
 <iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
 </iframe>
@@ -362,7 +366,7 @@
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/replication_crisis.jpeg" style="width:60.0%"></p>
-<p></p><figcaption><span class="citation" data-cites="opensciencecollaboration2015">OPEN SCIENCE COLLABORATION (<a href="#/ref-opensciencecollaboration2015" role="doc-biblioref" onclick="return false;">2015</a>)</span></figcaption><p></p>
+<p></p><figcaption><span class="citation" data-cites="opensciencecollaboration2015">Open Science Collaboration (<a href="#/ref-opensciencecollaboration2015" role="doc-biblioref" onclick="return false;">2015</a>)</span></figcaption><p></p>
 </figure>
 </div>
 <aside class="notes">
@@ -383,8 +387,8 @@
 <h2>The four horsemen and the replication crisis</h2>
 
 <img data-src="images/4horsemen.png" class="r-stretch quarto-figure-center"></section>
-<section id="a-possible-solution-open-science-practices" class="slide level2">
-<h2>A possible solution: Open science practices</h2>
+<section id="a-possible-solution-open-science" class="slide level2">
+<h2>A possible solution: Open science</h2>
 <iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
 </iframe>
 </section></section>
@@ -421,8 +425,9 @@
 <section id="practical-aspects" class="slide level2">
 <h2>Practical aspects</h2>
 <ul>
-<li>Ideally, you have a laptop with an internet connection and R + Rstudio installed</li>
-<li>All materials can be downloaded from:</li>
+<li>Ideally, you have a laptop with an internet connection and R <a href="https://cran.r-project.org">https://cran.r-project.org</a> + Rstudio <a href="https://www.rstudio.com/products/rstudio/download/">https://www.rstudio.com/products/rstudio/download/</a> installed</li>
+<li>All materials can be downloaded from: <a href="https://github.com/timvantilborgh/open-science-tools">https://github.com/timvantilborgh/open-science-tools</a></li>
+<li>Check slides: <a href="https://timvantilborgh.github.io/open-science-tools/presentation.html#/title-slide">https://timvantilborgh.github.io/open-science-tools/presentation.html#/title-slide</a></li>
 </ul>
 </section></section>
 <section>
@@ -434,9 +439,9 @@
 <h2>Why do we need open science?</h2>
 <p>Example Eric-Jan Wagenmakers:</p>
 <ul>
-<li>Dr.&nbsp;X has a favorite theory that she has worked on and published about previously.</li>
-<li>Dr.&nbsp;X designs an experiment to test a prediction from her theory.</li>
-<li>Dr.&nbsp;X collects the data, a painstaking and costly process. Part of her career and those of her students ride on the outcome.</li>
+<li>Dr.&nbsp;X has a favorite theory that (s)he has worked on and published about previously.</li>
+<li>Dr.&nbsp;X designs an experiment to test a prediction from her/his theory.</li>
+<li>Dr.&nbsp;X collects the data, a painstaking and costly process. Part of her/his career and those of her/his students ride on the outcome.</li>
 </ul>
 </section>
 <section id="why-do-we-need-open-science-1" class="slide level2">
@@ -468,6 +473,22 @@
 <li>When p &lt; .05, the result is declared “significant”and any further doubt is frowned upon.</li>
 </ul>
 </section>
+<section id="why-do-we-need-open-science-6" class="slide level2">
+<h2>Why do we need open science?</h2>
+<ul>
+<li>Evil scientists who fabricate and falsify data are not the main reason for the reproducibility crisis</li>
+<li>Most researchers have good intentions, but easily fool themselves while doing research</li>
+</ul>
+
+<img data-src="images/meme2.jpeg" class="r-stretch quarto-figure-right"></section>
+<section id="a-plea-for-slow-science" class="slide level2">
+<h2>A plea for slow science</h2>
+<ul>
+<li>By slowing down and focusing on quality over quantity, we can improve replicability of scientific findings</li>
+<li>“slow science urges rethinking the current university, against the fast, competitive, benchmarked research that not only restricts the choice of research topics and curricula but also threatens the quality of the knowledge” <a href="https://slowscience.be/the-slow-science-manifesto-2/">https://slowscience.be/the-slow-science-manifesto-2/</a></li>
+<li>“Slow science is open science”</li>
+</ul>
+</section>
 <section id="what-is-open-science" class="slide level2">
 <h2>What is open science?</h2>
 <blockquote>
@@ -494,7 +515,7 @@
 <section id="what-is-preregistration" class="slide level2">
 <h2>What is preregistration?</h2>
 <blockquote>
-<p>“…you’re simply specifying your research plan in advance of your study and submitting it to a registry.” <span class="citation" data-cites="science">(<a href="#/ref-science" role="doc-biblioref" onclick="return false;">Science n.d.</a>)</span></p>
+<p>“…you’re simply specifying your research plan in advance of your study and submitting it to a registry.” <span class="citation" data-cites="science">(<a href="#/ref-science" role="doc-biblioref" onclick="return false;">COS n.d.</a>)</span></p>
 </blockquote>
 <blockquote>
 <p>“The specification of a research design, hypotheses, and analysis plan prior to observing the outcomes of a study” <span class="citation" data-cites="lindsay2018">(<a href="#/ref-lindsay2018" role="doc-biblioref" onclick="return false;">Lindsay 2018</a>)</span></p>
@@ -511,32 +532,6 @@
 <li>Prevents researchers from fooling themselves</li>
 <li>Does not rule out exploratory findings; just labels them accordingly</li>
 </ul>
-</section>
-<section id="exploratory-vs-confirmatory-research" class="slide level2">
-<h2>Exploratory vs confirmatory research</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h4 id="exploratory">Exploratory</h4>
-<ul>
-<li>Hypothesis generating</li>
-<li>Results require replication</li>
-<li>Data-dependent</li>
-<li>Minimizes false negatives</li>
-<li>p-values lose diagnostic value</li>
-<li>Noinferences to wider population</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<h4 id="confirmatory">Confirmatory</h4>
-<ul>
-<li>Hypothesis testing</li>
-<li>Results are held to the highest standards</li>
-<li>Data-independent</li>
-<li>Minimizes false positives</li>
-<li>p-values retain diagnostic value</li>
-<li>Inferences may be drawn to wider population</li>
-</ul>
-</div>
-</div>
 </section>
 <section id="why-preregister" class="slide level2">
 <h2>Why preregister?</h2>
@@ -555,13 +550,12 @@
 <p>Research is reproducible when others can reproduce the results of a scientific study given only the original data, code, and documentation <span class="citation" data-cites="alston2021">(<a href="#/ref-alston2021" role="doc-biblioref" onclick="return false;">Alston and Rick 2021</a>)</span></p>
 </blockquote>
 </section>
-<section id="what-are-benefits-of-reproducible-research" class="slide level2">
-<h2>What are benefits of reproducible research?</h2>
+<section id="benefits-of-reproducible-research" class="slide level2">
+<h2>Benefits of reproducible research?</h2>
 <p><span class="citation" data-cites="alston2021">Alston and Rick (<a href="#/ref-alston2021" role="doc-biblioref" onclick="return false;">2021</a>)</span>:</p>
 <ul>
 <li>A log of all steps taken in the research process</li>
-<li>Easy to update analyses</li>
-<li>Easy to reuse materials and save time</li>
+<li>Easy to update analyses, reuse materials and save time</li>
 <li>Signals rigor, transparency, and trustworthiness</li>
 <li>Increases citation rate</li>
 <li>Allows others to learn from your work</li>
@@ -569,8 +563,8 @@
 <li>Prevents mistakes from compounding over time</li>
 </ul>
 </section>
-<section id="what-are-challenges-of-reproducible-research" class="slide level2">
-<h2>What are challenges of reproducible research?</h2>
+<section id="challenges-of-reproducible-research" class="slide level2">
+<h2>Challenges of reproducible research?</h2>
 <p><span class="citation" data-cites="alston2021">Alston and Rick (<a href="#/ref-alston2021" role="doc-biblioref" onclick="return false;">2021</a>)</span>:</p>
 <ul>
 <li>Learning curve</li>
@@ -586,8 +580,8 @@
 <p>Sharing relevant research material (data, code, questionnaire, stimuli, lab notebook, …) and/or research output (presentations, manuscripts) with the broader public.</p>
 </blockquote>
 </section>
-<section id="what-are-benefits-of-open-materials" class="slide level2">
-<h2>What are benefits of open materials?</h2>
+<section id="benefits-of-open-materials" class="slide level2">
+<h2>Benefits of open materials?</h2>
 <ul>
 <li>Verification</li>
 <li>Reproducability</li>
@@ -623,16 +617,16 @@
 </section>
 <section id="where-to-preregister" class="slide level2">
 <h2>Where to preregister?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>As predicted:</p>
+<p>aspredicted (https://aspredicted.org):</p>
 <ul>
 <li>Short: 9 questions</li>
 <li>All authors approve</li>
 <li>Does not become public until authors act to publish it</li>
 </ul>
-</div><div class="column" style="width:50%;">
-<p>OSF:</p>
+</section>
+<section id="where-to-preregister-1" class="slide level2">
+<h2>Where to preregister?</h2>
+<p>Open Science Framework (https://osf.io):</p>
 <ul>
 <li>Large number of templates</li>
 <li>All participating authors can cancel within 48 hours</li>
@@ -640,8 +634,6 @@
 <li>Withdrawing possible but leaves behind basic metadata</li>
 <li>Also allows to make scripts, materials, preprints public</li>
 </ul>
-</div>
-</div>
 </section>
 <section id="osf-preregistration-templates" class="slide level2">
 <h2>OSF Preregistration templates</h2>
@@ -659,6 +651,9 @@
 <h1>Reproducible research: A brief workshop</h1>
 
 </section>
+<section id="another-warning" class="slide level2" data-background-image="images/meme3.jpg" data-background-size="500px">
+<h2>Another warning</h2>
+</section>
 <section id="papaja" class="slide level2">
 <h2>Papaja</h2>
 <blockquote>
@@ -667,7 +662,7 @@
 <ul>
 <li>papaja creates dynamic scientific reports</li>
 <li>papaja ensures that manuscript complies to APA rules</li>
-<li>Manual: http://frederikaust.com/papaja_man/</li>
+<li>Manual: <a href="http://frederikaust.com/papaja_man/">http://frederikaust.com/papaja_man/</a></li>
 </ul>
 </section>
 <section id="getting-started" class="slide level2">
@@ -725,7 +720,7 @@ devtools::install_github("crsh/papaja@devel")
 <li>Manuscript metadata</li>
 <li>Rendering options</li>
 <li>Body</li>
-<li>Uses markdown for layout (https://www.markdownguide.org/cheat-sheet/)</li>
+<li>Uses markdown for layout <a href="https://www.markdownguide.org/cheat-sheet/">https://www.markdownguide.org/cheat-sheet/</a></li>
 <li>Can contain R code chunks</li>
 </ul>
 </section>
@@ -792,22 +787,16 @@ devtools::install_github("crsh/papaja@devel")
 <section id="available-platforms" class="slide level2">
 <h2>Available platforms</h2>
 <ul>
-<li>Many repositories exist (https://www.re3data.org)</li>
-<li>“A data repository is an online platform that is used to deposit completed datasets with the purpose to publish, share and/or preserve them. A data repository is database infrastructure that compiles, manages and gives access to data and associated metadata and documentation.”</li>
+<li>Many repositories exist <a href="https://www.re3data.org">https://www.re3data.org</a></li>
+<li>“A data repository is an online platform that is used to deposit completed datasets with the purpose to publish, share and/or preserve them.”</li>
 <li>However, repositories can be used for more than just data</li>
-<li>Common repositories in our field include Open Science Framework (https://osf.io) and Zenodo (https://zenodo.org)</li>
+<li>Common repositories in our field include Open Science Framework <a href="https://osf.io">https://osf.io</a> and Zenodo <a href="https://zenodo.org">https://zenodo.org</a></li>
 </ul>
 </section>
 <section id="lets-share-some-materials-about-our-study" class="slide level2">
 <h2>Let’s share some materials about our study</h2>
 <ul>
 <li>Create project in OSF</li>
-</ul>
-</section>
-<section id="concerns-about-sharing-data" class="slide level2">
-<h2>Concerns about sharing data</h2>
-<ul>
-<li>Discussion: what concerns do you have about sharing data?</li>
 </ul>
 </section></section>
 <section>
@@ -818,27 +807,36 @@ devtools::install_github("crsh/papaja@devel")
 <section id="adopting-open-science-tools-a-worthy-investment" class="slide level2">
 <h2>Adopting open science tools: A worthy investment?</h2>
 <ul>
-<li>Open science practices can help us strengthen the credibility and replicability of IO psychlogy research</li>
-<li>We need to acknowledge that adopting these practices takes time</li>
+<li>Open science practices can help us strengthen the credibility and replicability of IO psychology research</li>
+<li>Acknowledge that adopting these practices takes time</li>
 <li>As an ECR, learning these practices and tools is a valuable skill</li>
-<li>As a senior researcher, we should not feel threatened by these practices and tools</li>
 <li>Widespread adaptation requires systemic changes</li>
 <li>We need to emphasize quality over quantity in research</li>
 </ul>
+</section>
+<section id="the-role-of-fowop" class="slide level2">
+<h2>The role of FOWOP?</h2>
+<iframe src="https://pollev-embeds.com/timvantilbor357" width="1000px" height="600px">
+</iframe>
 </section></section>
 <section>
 <section id="thank-you-for-your-attention" class="title-slide slide level1 center">
 <h1>Thank you for your attention</h1>
-
+<p>Email: <a href="tim.vantilborgh@vub.be">tim.vantilborgh@vub.be</a></p>
+<p>Twitter: <a href="https://twitter.com/timvantilborgh">https://twitter.com/timvantilborgh</a></p>
 </section>
 <section id="bibliography" class="slide level2 smaller scrollable">
 <h2>Bibliography</h2>
-<div class="footer footer-default">
 
+<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p>Using tools to make science more open</p>
 </div>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-alston2021" class="csl-entry" role="doc-biblioentry">
 Alston, Jesse M., and Jessica A. Rick. 2021. <span>“A <span>Beginner</span>’s <span>Guide</span> to <span>Conducting Reproducible Research</span>.”</span> <em>The Bulletin of the Ecological Society of America</em> 102 (2): e01801. <a href="https://doi.org/10.1002/bes2.1801">https://doi.org/10.1002/bes2.1801</a>.
+</div>
+<div id="ref-science" class="csl-entry" role="doc-biblioentry">
+COS. n.d. <span>“Preregistration.”</span> Accessed September 2, 2022. <a href="https://www.cos.io/initiatives/prereg">https://www.cos.io/initiatives/prereg</a>.
 </div>
 <div id="ref-cruwell2019" class="csl-entry" role="doc-biblioentry">
 Crüwell, Sophia, Johnny van Doorn, Alexander Etz, Matthew Makel, Hannah Moshontz, Jesse Niebaum, Amy Orben, Sam Parsons, and Michael Schulte-Mecklenbeck. 2019. <span>“8 <span>Easy Steps</span> to <span>Open Science</span>: <span>An Annotated Reading List</span>.”</span> <em>ArXiv</em>. <a href="https://doi.org/10.31234/osf.io/cfzyx">https://doi.org/10.31234/osf.io/cfzyx</a>.
@@ -847,10 +845,7 @@ Crüwell, Sophia, Johnny van Doorn, Alexander Etz, Matthew Makel, Hannah Moshont
 Lindsay, Brian A. Nosek and D. Stephen. 2018. <span>“Preregistration <span>Becoming</span> the <span>Norm</span> in <span>Psychological Science</span>.”</span> <em>APS Observer</em> 31 (February). <a href="https://www.psychologicalscience.org/observer/preregistration-becoming-the-norm-in-psychological-science">https://www.psychologicalscience.org/observer/preregistration-becoming-the-norm-in-psychological-science</a>.
 </div>
 <div id="ref-opensciencecollaboration2015" class="csl-entry" role="doc-biblioentry">
-OPEN SCIENCE COLLABORATION. 2015. <span>“Estimating the Reproducibility of Psychological Science.”</span> <em>Science</em> 349 (6251): aac4716. <a href="https://doi.org/10.1126/science.aac4716">https://doi.org/10.1126/science.aac4716</a>.
-</div>
-<div id="ref-science" class="csl-entry" role="doc-biblioentry">
-Science, Center for Open. n.d. <span>“Preregistration.”</span> Accessed September 2, 2022. <a href="https://www.cos.io/initiatives/prereg">https://www.cos.io/initiatives/prereg</a>.
+Open Science Collaboration. 2015. <span>“Estimating the Reproducibility of Psychological Science.”</span> <em>Science</em> 349 (6251): aac4716. <a href="https://doi.org/10.1126/science.aac4716">https://doi.org/10.1126/science.aac4716</a>.
 </div>
 </div>
 </section></section>
